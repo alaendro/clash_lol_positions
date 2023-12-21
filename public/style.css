@@ -1,0 +1,12 @@
+body{
+    font-family: "Georgia", "Times New Roman", serif;
+}
+
+#information{
+    flex: auto;
+    flex-direction: column;
+}
+
+.table_information{
+    border: 1px;
+}

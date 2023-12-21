@@ -28,7 +28,7 @@ async function clash_info(summoner_id, api_key){
 
 async function display_players(team_id, api_key){
     let output = document.getElementById("information");
-    let table = document.createElement("table");
+    let table = document.createElement("table").className("table_information");
     await fetch("https://euw1.api.riotgames.com/lol/clash/v1/teams/" + team_id + "?api_key=" + api_key)
     .then(result => result.json())
     .then(data => {
@@ -41,11 +41,14 @@ async function display_players(team_id, api_key){
                 let row = document.createElement("tr");
                 let name_player = document.createElement("td");
                 let position = document.createElement("td");
+                let ugg_url = document.createElement("td");
 
                 name_player.innerHTML = data.name;
                 position.innerHTML = pos;
+                ugg_url.innerHTML = document.createElement("a").href("https://u.gg/player/" + name_player);
                 row.appendChild(name_player);
                 row.appendChild(position);
+                row.appendChild(ugg_url);
 
                 table.appendChild(row);
             })
