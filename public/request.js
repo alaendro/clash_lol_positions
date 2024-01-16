@@ -45,7 +45,7 @@ async function display_players(team_id, api_key){
 
                 name_player.innerHTML = data.name;
                 position.innerHTML = pos;
-                ugg_url.innerHTML = document.createElement("a").href("https://u.gg/player/" + name_player);
+                ugg_url.innerHTML = document.createElement("a").href("https://u.gg/lol/profile/euw1player/" + name_player + "/overview");
                 row.appendChild(name_player);
                 row.appendChild(position);
                 row.appendChild(ugg_url);
